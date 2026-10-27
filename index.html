@@ -35,14 +35,14 @@
       <p class="lede">Looking for full-time software engineering roles starting 2027.</p>
       <ul class="links">
         <li><a class="pill" href="assets/Adharsh_Shokkalingam_Resume.pdf">Download resume</a></li>
-        <li><button type="button" class="reveal" data-kind="email" data-v="YWMuYXRyZWJsYXVAaWxha2tvaHM=">Show email</button></li>
+        <li><button type="button" class="reveal" data-kind="email" data-v="bW9jLmxpYW1nQDMyb3NraHNyYWg=">Show email</button></li>
         <li><a href="https://github.com/HarshS23">GitHub</a></li>
         <li><a href="https://linkedin.com/in/ykharsh">LinkedIn</a></li>
       </ul>
     </header>
 
-    <!-- Project dates aren't on the PDF resume. They come from the .docx resume, or for OS 1
-         and Consistant, from each repo's first commit. Newest first, like the rest of the page. -->
+    <!-- Dates come from the resume. OS 1 and Consistant start dates aren't on it, so they come
+         from each repo's first commit. Newest first, like the rest of the page. -->
     <aside class="timeline" aria-labelledby="timeline-title">
       <div class="timeline-inner">
         <h2 id="timeline-title" class="tl-title">Timeline</h2>
@@ -68,9 +68,9 @@
       <article class="entry" id="edu-ualberta">
         <div class="entry-head">
           <h3>University of Alberta <span class="role">BSc Computer Science, Minor in Mathematics</span></h3>
-          <span class="date">Expected May 2027</span>
+          <span class="date">May 2027</span>
         </div>
-        <p>Coursework: software engineering, data structures and algorithms, database management, computer architecture I and II, machine learning, operating systems, artificial intelligence, calculus I–IV.</p>
+        <p>Coursework: software engineering, data structures and algorithms, database management, computer architecture I and II, machine learning, operating systems, artificial intelligence, numerical analysis, calculus I–IV, ODEs.</p>
       </article>
     </section>
 
@@ -81,51 +81,20 @@
           <h3>AlbertaSAT <span class="role">Software Engineer</span></h3>
           <span class="date">Jun 2026 – Present</span>
         </div>
-        <!-- A single point reads better as a sentence than as a one-item bullet list. -->
-        <p>Develop software in Rust for the on-board computer of the university's Ex-Alta 3 mission, targeting embedded systems with strict mission-critical reliability constraints.</p>
+        <ul>
+          <li>Develop flight software in Rust for the Ex-Alta 3 satellite's on-board computer on a team of 30+, following code review and testing requirements for mission-critical reliability.</li>
+          <li>Implemented display formatting for Digital Fluxgate Magnetometer (DFGM) telemetry, making incoming data readable for ground station operators.</li>
+          <li>Implemented the fault-handling policy for non-critical subsystems (ADCS, DFGM): after a failed health ping, the subsystem is powered off through EPS commands, keeping recovery under operator control.</li>
+        </ul>
       </article>
     </section>
 
     <section aria-labelledby="projects">
       <h2 id="projects">Projects</h2>
 
-      <!-- Same order as the resume. Course projects are labelled so nobody is surprised
-           when the code isn't public. -->
-      <article class="entry" id="proj-3d-engine">
-        <div class="entry-head">
-          <h3><a href="https://github.com/HarshS23/3D-Engine">3D Engine CPU Rasterizer</a> <span class="role">C, SDL2</span></h3>
-        </div>
-        <p>An interactive 3D engine in C with no GPU API, using SDL2 for windowing and input. It does backface culling, near-plane clipping, dynamic camera transforms with six degrees of freedom, and basic lighting. Four render modes (wireframe, vertex-highlighted, solid fill, textured) switch from the keyboard, and the code is split into lighting, geometry, mesh, culling, and camera modules.</p>
-      </article>
-
-      <article class="entry" id="proj-sulfur">
-        <div class="entry-head">
-          <h3><a href="https://github.com/CMPUT301-Sulfur/sulfur-events">Sulfur Events Lottery App</a> <span class="role">Java, Firebase</span></h3>
-        </div>
-        <p>A full-stack Android app for managing events and their sign-up lotteries, built with a team in Java and Android Studio. I implemented QR code generation and scanning, including storing and reading embedded geolocation to show and update event and user locations. Cloud Firestore handles storage, queries, and consistency across users.</p>
-      </article>
-
-      <article class="entry" id="proj-riscv-wasm">
-        <div class="entry-head">
-          <h3>RISC-V to WASM Converter <span class="role">RISC-V (RV32I)</span></h3>
-        </div>
-        <p>Converts RV32I machine code to WebAssembly bytecode, supporting R-type, I-type, and branch instructions: arithmetic, logic, shifts, and conditional control flow. I built a signed LEB128 encoder from scratch to emit immediate operands. Course project, so the code is private; I'm happy to walk through it.</p>
-      </article>
-
-      <article class="entry" id="proj-monitor">
-        <div class="entry-head">
-          <h3><a href="https://github.com/HarshS23/Distributed-Process-Monitor">Distributed System Monitor</a> <span class="role">C++</span></h3>
-        </div>
-        <p>Two programs, <code>distpsnotify</code> and <code>remoteagent</code>, that collect real-time data from several remote machines at once over TCP/IP. They speak a custom client-server protocol (EXECUTE/QUIT, START/STOP delimiters) over persistent connections. Agent state is heap-allocated for any number of machines, with zero leaks on every code path, verified with Clang's leak tools on macOS. Course project.</p>
-      </article>
-
-      <article class="entry" id="proj-consistant">
-        <div class="entry-head">
-          <h3><a href="https://github.com/HarshS23/Consistant">Consistant</a> <span class="role">Swift, Supabase</span></h3>
-        </div>
-        <p>A native iOS habit tracker built with SwiftUI and Supabase/Postgres, with row-level security and offline-first sync. It's an experiment in agentic development: I directed AI agents through the code generation and wrote the system architecture specifications myself.</p>
-      </article>
-
+      <!-- Same order and dates as the resume, newest first. Consistant isn't on the resume but
+           stays on the site at the user's request, slotted in by date. Course projects are
+           labelled so nobody is surprised when the code isn't public. -->
       <article class="entry" id="proj-os1">
         <div class="entry-head">
           <h3><a href="https://github.com/HarshS23/OS1">OS 1</a> <span class="role">C, QEMU</span></h3>
@@ -133,12 +102,51 @@
         </div>
         <p>A bare-metal x86_64 kernel with a custom interrupt descriptor table for CPU exceptions and hardware interrupts, multilevel paging for virtual memory, and a heap allocator with bump, linked-list, and fixed-size block strategies.</p>
       </article>
+
+      <article class="entry" id="proj-consistant">
+        <div class="entry-head">
+          <h3><a href="https://github.com/HarshS23/Consistant">Consistant</a> <span class="role">Swift, Supabase</span></h3>
+          <span class="date">In progress</span>
+        </div>
+        <p>A native iOS habit tracker built with SwiftUI and Supabase/Postgres, with row-level security and offline-first sync. It's an experiment in agentic development: I directed AI agents through the code generation and wrote the system architecture specifications myself.</p>
+      </article>
+
+      <article class="entry" id="proj-monitor">
+        <div class="entry-head">
+          <h3><a href="https://github.com/HarshS23/Distributed-Process-Monitor">Distributed System Monitor</a> <span class="role">C++</span></h3>
+          <span class="date">Jan – Feb 2026</span>
+        </div>
+        <p>Two programs, <code>distpsnotify</code> and <code>remoteagent</code>, that collect real-time data from several remote machines at once over TCP/IP. They speak a custom client-server protocol (EXECUTE/QUIT, START/STOP delimiters) over persistent connections. Agent state is heap-allocated for any number of machines, with zero leaks on every code path, verified with Clang's leak tools on macOS. Course project.</p>
+      </article>
+
+      <article class="entry" id="proj-riscv-wasm">
+        <div class="entry-head">
+          <h3>RISC-V to WASM Converter <span class="role">RISC-V (RV32I)</span></h3>
+          <span class="date">Sep – Oct 2025</span>
+        </div>
+        <p>Converts RV32I machine code to WebAssembly bytecode, supporting R-type, I-type, and branch instructions: arithmetic, logic, shifts, and conditional control flow. I built a signed LEB128 encoder from scratch to emit immediate operands. Course project, so the code is private; I'm happy to walk through it.</p>
+      </article>
+
+      <article class="entry" id="proj-sulfur">
+        <div class="entry-head">
+          <h3><a href="https://github.com/CMPUT301-Sulfur/sulfur-events">Sulfur Events Lottery App</a> <span class="role">Java, Firebase</span></h3>
+          <span class="date">Sep – Dec 2025</span>
+        </div>
+        <p>A full-stack Android app for managing events and their sign-up lotteries, built with a team in Java and Android Studio. I implemented QR code generation and scanning, including storing and reading embedded geolocation to show and update event and user locations. Cloud Firestore handles storage, queries, and consistency across users.</p>
+      </article>
+
+      <article class="entry" id="proj-3d-engine">
+        <div class="entry-head">
+          <h3><a href="https://github.com/HarshS23/3D-Engine">3D Engine CPU Rasterizer</a> <span class="role">C, SDL2</span></h3>
+          <span class="date">Jan – May 2025</span>
+        </div>
+        <p>An interactive 3D engine in C with no GPU API, using SDL2 for windowing and input. It does backface culling, near-plane clipping, dynamic camera transforms with six degrees of freedom, and basic lighting. Four render modes (wireframe, vertex-highlighted, solid fill, textured) switch from the keyboard, and the code is split into lighting, geometry, mesh, culling, and camera modules.</p>
+      </article>
     </section>
 
     <section aria-labelledby="skills">
       <h2 id="skills">Skills</h2>
-      <!-- Grouped as on the resume. MongoDB appears once here even though the resume lists it
-           twice. -->
+      <!-- Grouped as on the resume. -->
       <dl class="skills">
         <dt>Languages</dt>
         <dd>Python, C, C++, Java, SQL, Rust, RISC-V, HTML/CSS, SPSS</dd>
@@ -156,7 +164,7 @@
       <p class="contact-note">Email is the fastest way to reach me.</p>
       <dl class="skills">
         <dt>Email</dt>
-        <dd><button type="button" class="reveal" data-kind="email" data-v="YWMuYXRyZWJsYXVAaWxha2tvaHM=">Show email</button></dd>
+        <dd><button type="button" class="reveal" data-kind="email" data-v="bW9jLmxpYW1nQDMyb3NraHNyYWg=">Show email</button></dd>
         <dt>Phone</dt>
         <dd><button type="button" class="reveal" data-kind="phone" data-v="NDkzMi0wNDQtNTI4">Show phone</button></dd>
         <dt>LinkedIn</dt>

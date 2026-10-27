@@ -242,8 +242,17 @@ h3 a::after {
   white-space: nowrap;
 }
 
-.entry p {
+.entry p,
+.entry ul {
   margin: 8px 0 0;
+}
+
+.entry ul {
+  padding-left: 20px;
+}
+
+.entry li + li {
+  margin-top: 6px;
 }
 
 .skills {

@@ -1,0 +1,8 @@
+# Everything committed here is published by GitHub Pages, so keep working files out.
+
+# Editable resume sources stay local; only the exported PDF is meant to be public.
+*.docx
+~$*
+
+# macOS Finder metadata.
+.DS_Store
